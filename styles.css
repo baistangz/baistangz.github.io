@@ -1,0 +1,158 @@
+/* =========================================
+   1. Reset & Base Styles
+   ========================================= */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #ffffff; /* White background */
+    color: #333333;            /* Dark grey text for readability */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    padding-top: 60px;         /* Space at the top */
+    padding-bottom: 60px;      /* Space at the bottom */
+}
+
+/* Global Link Styles */
+a {
+    color: #0056b3;            /* Academic Blue */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #003d82;
+}
+
+/* Main Container */
+.container {
+    max-width: 750px;
+    margin: 0 auto;            /* Centers the container */
+    padding: 0 20px;           /* Side padding for mobile */
+}
+
+/* =========================================
+   2. Intro Section (Name, Role, Bio)
+   ========================================= */
+.intro {
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.role {
+    font-size: 1.2em;
+    color: #0056b3;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.location {
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+.bio p {
+    margin-bottom: 15px;
+    color: #444;
+    max-width: 90%;
+}
+
+.cv-link {
+    margin-top: 15px;
+    font-style: italic;
+    color: #555;
+}
+
+/* =========================================
+   3. News Section
+   ========================================= */
+.news {
+    margin-bottom: 60px;
+}
+
+.news h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #111;
+    border-bottom: 1px solid #eee; /* Subtle underline */
+    padding-bottom: 10px;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.news-item {
+    display: flex;
+    align-items: baseline;
+}
+
+.news-item .date {
+    width: 110px;          /* Fixed width for alignment */
+    flex-shrink: 0;        /* Prevents date from squishing */
+    font-weight: 600;
+    color: #666;
+    font-size: 0.9em;
+    font-feature-settings: "tnum"; /* Monospace numbers */
+}
+
+.news-item .content {
+    color: #333;
+}
+
+/* =========================================
+   4. Social Icons Section
+   ========================================= */
+.socials {
+    text-align: center;
+    margin-top: 80px;
+    padding-top: 40px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;             /* Space between icons */
+    margin-bottom: 20px;
+}
+
+.icons a {
+    color: #cccccc;        /* Light grey initially */
+    font-size: 2.2rem;     /* Icon size */
+    transition: all 0.3s ease;
+}
+
+/* Hover effects for icons */
+.icons a:hover {
+    color: #333333;        /* Dark grey on hover */
+    transform: translateY(-3px); /* Slight lift effect */
+}
+
+.contact-text {
+    color: #888;
+    font-size: 0.9em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    h1 { font-size: 1.8em; }
+    .news-item { flex-direction: column; }
+    .news-item .date { margin-bottom: 4px; }
+    .container { padding: 0 25px; }
+}
