@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baistan Zhyldyzbekov/CP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="cp">
+
+    <nav class="top-nav">
+        <a href="index.html" title="About" class="nav-item">
+            <i class="fas fa-user"></i>
+        </a>
+        <a href="cp.html" title="Competitive Programming" class="nav-item">
+            <i class="fas fa-terminal"></i>
+        </a>
+    </nav>
+
+    <main class="container">
+        
+        <section class="intro">
+            <h1>Competitive Programming</h1>
+        </section>
+
+        
+        <section class="cp-problem">
+            <h3><a href="https://codeforces.com/contest/1903/problem/A" target="_blank">1903A - Halloumi Boxes</a></h3>
+            
+            <div class="problem-description">
+                <strong>Insight:</strong> 
+                If you can reverse a subarray of length 2 (meaning k≥2), you are effectively swapping two neighbors ([A,B]→[B,A]).
+                If you can swap neighbors, you can perform Bubble Sort.
+                Bubble Sort can sort any array arrangement.
+            </div>
+
+            <details>
+                <summary>View Solution</summary>
+                <div class="code-block">
+<pre><code>
+t = int(input())
+
+for _ in range(t):
+    n,k = map(int, input().split())
+    a = list(map(int, input().split()))
+
+    if k >= 2 or a == sorted(a):
+        print("YES")
+    else:
+        print("NO")
+</code></pre>
+                </div>
+            </details>
+        </section>
+
+        [insert a new problem]
+
+        <section class="socials">
+            <div class="icons">
+                <a href="https://codeforces.com/profile/baistangz" title="Codeforces Profile" target="_blank">
+                    <i class="fas fa-chart-simple"></i>
+                </a>
+            </div>
+        </section>
+
+
+    </main>
+</body>
+</html>
