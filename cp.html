@@ -39,12 +39,13 @@
                 <summary>View Solution</summary>
                 <div class="code-block">
 <pre><code>
-t = int(input())
+t = int(input()) # testcases
 for _ in range(t):
-    n,k = map(int, input().split())
+
+    n,k = map(int, input().split()) # inputs
     a = list(map(int, input().split()))
 
-    if k >= 2 or a == sorted(a):
+    if k >= 2 or a == sorted(a): # sol
         print("YES")
     else:
         print("NO")
@@ -59,26 +60,27 @@ for _ in range(t):
             
             <div class="problem-description">
                 <strong>Insight:</strong> 
-                Calculate the distance from start to second station.
-                Then from second to the last.
-                Then double the distance from last station to destination X.
+                calc the dist. from start to the first station.
+                then from the first to the last.
+                then double the dist. from the last station to dest. "X".
             </div>
 
             <details>
                 <summary>View Solution</summary>
                 <div class="code-block">
 <pre><code>
-t = int(input())
+t = int(input()) # testcases
 for _ in range(t):
-    n_stations,x_dest= map(int, input().split())
+
+    n_stations,x_dest= map(int, input().split()) # inputs
     station_indices = list(map(int, input().split()))
 
-    gaps = []
+    gaps = [] # sol
     gaps.append(station_indices[0]-0)
 
     for i in range(len(station_indices)-1):
         gaps.append(station_indices[i+1]-station_indices[i])
-
+        
     gaps.append(2*(x_dest-station_indices[-1]))
 
     print(max(gaps))
