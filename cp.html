@@ -30,9 +30,9 @@
             
             <div class="problem-description">
                 <strong>Insight:</strong> 
-                If you can reverse a subarray of length 2 (meaning k≥2), you are effectively swapping two neighbors ([A,B]→[B,A]).
-                If you can swap neighbors, you can perform Bubble Sort.
-                Bubble Sort can sort any array arrangement.
+                if you can reverse a subarray of length 2 (k≥2), you are swapping two neighbors.
+                if you can swap neighbors, you can do Bubble Sort.
+                Bubble Sort can sort any array.
             </div>
 
             <details>
@@ -60,9 +60,9 @@ for _ in range(t):
             
             <div class="problem-description">
                 <strong>Insight:</strong> 
-                calc the dist. from start to the first station.
+                calc the distance from start to the first station.
                 then from the first to the last.
-                then double the dist. from the last station to dest. "X".
+                then double the distance from the last station to destination X.
             </div>
 
             <details>
@@ -80,7 +80,7 @@ for _ in range(t):
 
     for i in range(len(station_indices)-1):
         gaps.append(station_indices[i+1]-station_indices[i])
-        
+
     gaps.append(2*(x_dest-station_indices[-1]))
 
     print(max(gaps))
