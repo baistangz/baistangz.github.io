@@ -10,7 +10,7 @@ link = input("Problem Link: ").strip()
 # CRITICAL FIX: The marker CANNOT be empty.
 # It must match the HTML comment in your file exactly.
 # ======================================================
-marker = "[problem to be inserted]"
+marker = "[a new problem to be inserted here]"
 
 html_block = f"""
         <section class="cp-problem">

@@ -40,7 +40,6 @@
                 <div class="code-block">
 <pre><code>
 t = int(input())
-
 for _ in range(t):
     n,k = map(int, input().split())
     a = list(map(int, input().split()))
@@ -54,7 +53,41 @@ for _ in range(t):
             </details>
         </section>
 
-        [problem to be inserted]
+        
+        <section class="cp-problem">
+            <h3><a href="https://codeforces.com/problemset/problem/1901/A" target="_blank">1901A - Line Trip</a></h3>
+            
+            <div class="problem-description">
+                <strong>Insight:</strong> 
+                Calculate the distance from start to second station.
+                Then from second to the last.
+                Then double the distance from last station to destination X.
+            </div>
+
+            <details>
+                <summary>View Solution</summary>
+                <div class="code-block">
+<pre><code>
+t = int(input())
+for _ in range(t):
+    n_stations,x_dest= map(int, input().split())
+    station_indices = list(map(int, input().split()))
+
+    gaps = []
+    gaps.append(station_indices[0]-0)
+
+    for i in range(len(station_indices)-1):
+        gaps.append(station_indices[i+1]-station_indices[i])
+
+    gaps.append(2*(x_dest-station_indices[-1]))
+
+    print(max(gaps))
+</code></pre>
+                </div>
+            </details>
+        </section>
+
+        [a new problem to be inserted here]
 
         <section class="socials">
             <div class="icons">
