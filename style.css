@@ -187,7 +187,24 @@ h1 {
 }
 
 /* Mobile Responsiveness */
+/* Mobile Responsiveness */
 @media (max-width: 600px) {
+    /* 1. Reduce top space so the page isn't empty */
+    body {
+        padding-top: 20px;
+    }
+
+    /* 2. THE FIX: Stop floating the icons */
+    .top-nav {
+        position: static;        /* Puts icons back in the document flow */
+        flex-direction: row;     /* Horizontal row (side-by-side) */
+        justify-content: flex-end; /* Align to the right */
+        margin-bottom: 10px;     /* Push the Title down so they don't touch */
+        padding-right: 25px;     /* Align nicely with the text */
+        width: 100%;
+    }
+
+    /* 3. Existing mobile tweaks */
     h1 { font-size: 1.8em; }
     .news-item { flex-direction: column; }
     .news-item .date { margin-bottom: 4px; }
