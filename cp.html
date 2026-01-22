@@ -89,6 +89,89 @@ for _ in range(t):
             </details>
         </section>
 
+        
+        <section class="cp-problem">
+            <h3><a href="https://codeforces.com/problemset/problem/1900/A" target="_blank">1900A - Cover in Water</a></h3>
+            
+            <div class="problem-description">
+                <strong>Insight:</strong> 
+                if '...' in str, you fill the outer two (cost=2). middle fills for free. take middle and fill others.
+            </div>
+
+            <details>
+                <summary>View Solution</summary>
+                <div class="code-block">
+<pre><code>
+t = int(input())
+for _ in range(t):
+
+    n = int(input())
+    s = input()
+
+    if '...' in s:
+        print(2)
+    else:
+        print(s.count('.'))
+</code></pre>
+                </div>
+            </details>
+        </section>
+
+        
+        <section class="cp-problem">
+            <h3><a href="https://codeforces.com/problemset/problem/1899/A" target="_blank">1899A - Game with Integers</a></h3>
+            
+            <div class="problem-description">
+                <strong>Insight:</strong> 
+                if n%3 != 0, there is one step to win. otherways it is just n+1, then n-1 from the opposite team.
+            </div>
+
+            <details>
+                <summary>View Solution</summary>
+                <div class="code-block">
+<pre><code>
+t = int(input())
+for _ in range(t):
+
+    n = int(input())
+
+    if n%3 == 0:
+        print('Second')
+    else:
+        print('First')
+</code></pre>
+                </div>
+            </details>
+        </section>
+
+        
+        <section class="cp-problem">
+            <h3><a href="https://codeforces.com/problemset/problem/1896/A" target="_blank">1896A - Jagged Swaps</a></h3>
+            
+            <div class="problem-description">
+                <strong>Insight:</strong> 
+                if you can perform swaps, you can sort the arr. the only thing you cannot touch is the first element. make sure it is the min. of the arr.
+            </div>
+
+            <details>
+                <summary>View Solution</summary>
+                <div class="code-block">
+<pre><code>
+t = int(input())
+for _ in range(t):
+
+    n = int(input())
+    a = list(map(int, input().split()))
+
+    if a[0] == 1: # min input is 1
+        print('YES')
+    else:
+        print('NO')
+</code></pre>
+                </div>
+            </details>
+        </section>
+
         [a new problem to be inserted here]
 
         <section class="socials">
