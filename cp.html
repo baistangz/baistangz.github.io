@@ -172,6 +172,45 @@ for _ in range(t):
             </details>
         </section>
 
+        
+        <section class="cp-problem">
+            <h3><a href="https://codeforces.com/problemset/problem/1890/A" target="_blank">1890A - Doremy's Paint 3</a></h3>
+            
+            <div class="problem-description">
+                <strong>Insight:</strong> 
+                b1+b2=b2+b3=b3+b4 simplifies to b1=b3 and b2=b4. it means that we can have at most 2 distinct values. also, the number of these values must be balanced (equal or off by 1).
+
+            </div>
+
+            <details>
+                <summary>View Solution</summary>
+                <div class="code-block">
+<pre><code>
+from collections import Counter # import
+
+t = int(input()) # testcases
+for _ in range(t):
+
+    n = int(input()) # inputs
+    a = list(map(int, input().split()))
+
+    counts = Counter(a) # dictionary (keys:values)
+    freqs = list(counts.values()) # list with no keys (only appearances)
+
+    if len(counts) == 1:
+        print('yes')
+    elif len(counts) == 2:
+        if abs(freqs[0]-freqs[1]) <= 1:
+            print('yes')
+        else:
+            print('no')
+    else:
+        print('no')
+</code></pre>
+                </div>
+            </details>
+        </section>
+
         [a new problem to be inserted here]
 
         <section class="socials">
